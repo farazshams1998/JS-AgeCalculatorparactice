@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <h2>Age Calculator</h2>
+    <script>
+
+        // var now = new Date();
+        // document.write(now + "<br>");
+
+        // var date = now.getSeconds()
+        // document.write(date)
+
+
+        var name = prompt("Enter Your Name :")
+        document.write("Name :" + name + "<br>")
+
+
+        // var birthDate = new Date('18 sep 1998')
+        var birthDate = new Date(prompt('Enter Your Birth Date', '18 sep 1998'))
+
+        var bdyear = birthDate;
+
+        //document.write("BirthDay :" + birthDate.toDateString() + "<br>")
+        document.write("BirthDay :" + bdyear.toDateString() + "<br>")
+
+        var today = new Date()
+        document.write("Today's Date :" + today.toDateString() + "<br>")
+
+        var mstoday = today.getTime();
+        var msBirthdate = birthDate.getTime()
+
+        var msdiff = mstoday - msBirthdate;
+
+        var ddiff = msdiff / (1000 * 60 * 60 * 24)
+        document.write("Total life Days :" + " " + Math.floor(ddiff) + "<br>")
+
+        var mmsBdYear = bdyear.getFullYear();
+        var mmsCurrent = today.getFullYear();
+
+
+        var totalAge = mmsCurrent - mmsBdYear;
+
+        document.write("Total Age :" + totalAge)
+
+        //document.write(msdate + "<br>" + mstoday + "<br>")
+
+
+    </script>
+</body>
+
+</html>
